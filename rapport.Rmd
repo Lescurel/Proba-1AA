@@ -14,6 +14,7 @@ Ce projet a pour but de simuler un(des) serveur(s) recevant des requetes. Les re
 
 ## Hypothèses
 Pour la simulation, on a fait les hypothèses suivantes : 
+
 - Les durées d'arrivées des requêtes sont caractérisées par une variable aléatoire X suivant une loi exponentielle de paramètre $\lambda$
 - Les temps de traitements des requêtes sont caractérisées par une variable aléatoire Y suivant une loi exponentielle de paramètre $\mu$
 - Une requête arrivant lorsqu'un serveur est disponible ne passe pas par la queue : elle est immédiatement traitée (si elle est de prioritée haute, ou si la queue est vide)
@@ -30,7 +31,7 @@ On sait que n arrivées d'une loi exponentielle sur un intervalle $[0,t]$ est di
 
 ### Gestion multi-serveurs
 
-La génération des données étant statique, on doit génerer, pour chaque serveur tous les temps de traitement hypothétiques. Même si ceux ci ne seront pas forcément utilisés ( si le serveur ne traite pas de requête à ce moment là.). Pour savoir si un temps de fin de traitement doit être pris en compte, on utilise une variable qui nous indique quels serveurs sont actifs, `server_level`.  Si le niveau du serveur est supérieur a cette varible, alors le temps de traitement est ignoré.  
+La génération des données étant statique, on doit génerer, pour chaque serveur tous les temps de traitement hypothétiques. Même si ceux ci ne seront pas forcément utilisés ( si le serveur ne traite pas de requête à ce moment là.). Pour savoir si un temps de fin de traitement doit être pris en compte, on utilise une variable qui nous indique quels serveurs sont actifs, `server_level`.  Si le niveau du serveur est supérieur à cette variable, alors le temps de traitement est ignoré.  
 
 ### Traitements des données
 
